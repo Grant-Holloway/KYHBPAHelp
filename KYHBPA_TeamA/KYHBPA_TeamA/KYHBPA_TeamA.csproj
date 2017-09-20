@@ -199,6 +199,10 @@
     <Compile Include="Migrations\201709132056451_AddedMemberTable.Designer.cs">
       <DependentUpon>201709132056451_AddedMemberTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709202032566_AddedPhotoTable.cs" />
+    <Compile Include="Migrations\201709202032566_AddedPhotoTable.Designer.cs">
+      <DependentUpon>201709202032566_AddedPhotoTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
@@ -286,6 +290,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709132056451_AddedMemberTable.resx">
       <DependentUpon>201709132056451_AddedMemberTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709202032566_AddedPhotoTable.resx">
+      <DependentUpon>201709202032566_AddedPhotoTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
