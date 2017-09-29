@@ -1,23 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Data;
+using System.Data.Entity;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using KYHBPA_TeamA.Models;
+using System.Linq;
 
 namespace KYHBPA_TeamA.Controllers
 {
     public class MembershipController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Membership
         public ActionResult Index()
         {
-            return View();
+            return View(db.Membership.ToList());
         }
 
         // GET: Membership/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Membership membership = db.Membership.Find(id);
+            if (membership == null)
+            {
+                return HttpNotFound();
+            }
+            return View(membership);
         }
 
         // GET: Membership/Create
@@ -28,62 +42,68 @@ namespace KYHBPA_TeamA.Controllers
 
         // POST: Membership/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Membership membership)
         {
-            try
+            if(ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                db.Membership.Add(membership);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+                return View(membership);
         }
 
         // GET: Membership/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Membership membership = db.Membership.Find(id);
+            if (membership == null)
+            {
+                return HttpNotFound();
+            }
+            return View(membership);
         }
 
         // POST: Membership/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int? id, Membership membership)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
+                db.Entry(membership).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+                return View(membership);
         }
 
         // GET: Membership/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Membership membership = db.Membership.Find(id);
+            if (membership == null)
+            {
+                return HttpNotFound();
+            }
+            return View(membership);
         }
 
         // POST: Membership/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteYes(int? id)
         {
-            try
-            {
-                // TODO: Add delete logic here
-
+                Membership membership = db.Membership.Find(id);
+                db.Membership.Remove(membership);
+                db.SaveChanges();
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }
