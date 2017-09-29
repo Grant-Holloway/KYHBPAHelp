@@ -37,11 +37,11 @@ textarea {
     /*background-size: cover;*/
     border: none;
     /*border-bottom: 1px white solid;*/
-    background: rgba(0,0,0,0.65);
+    background: rgba(26, 60, 191, 0.65)
 }
 
 #fluid {
-    background: url(../Content/hbpaBanner4.jpg);
+    background: url('../Content/Kentucky_Derby_2009_Panorama BETTER.jpg');
     background-size: cover;
     min-height: 400px;
     max-height: 400px;

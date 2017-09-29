@@ -283,6 +283,8 @@
     <Content Include="Content\hbpaBanner2.jpg" />
     <Content Include="Content\hbpaBanner3.jpg" />
     <Content Include="Content\hbpaBanner4.jpg" />
+    <Content Include="Content\Kentucky_Derby_2009_Panorama BETTER.jpg" />
+    <Content Include="Content\Kentucky_Derby_2009_Panorama-Recovered.png" />
     <Content Include="Entity\KYHBPA.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>KYHBPA.edmx</DependentUpon>
@@ -297,6 +299,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
