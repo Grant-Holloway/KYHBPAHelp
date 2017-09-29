@@ -10,6 +10,8 @@
 </head>
 <body>
     <div class="container" id="fluid">
+        <img class="logo"src="~/Content/logo.png" />
+        <<div class="banner-text">Kentucky Horsemen's Benevolent and Protective Association </div>
         <div class="navbar navbar-inverse navbar-fixed-top" >
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,3 +48,18 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<style>
+    .logo{
+        top:70px;
+        left:50px;
+        position:absolute;
+    }
+    .banner-text {
+        position: relative;
+        text-align: center;
+        line-height: 650px;
+        font-size:50px;
+        color:white;
+        text-shadow: 3px 6px 10px black;
+    }
+</style>
