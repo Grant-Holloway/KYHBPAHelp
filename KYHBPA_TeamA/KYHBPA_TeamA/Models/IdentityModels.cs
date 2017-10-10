@@ -11,6 +11,12 @@ namespace KYHBPA_TeamA.Models
     public class KYHBPAUser : IdentityUser
     {
         public Member Member { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public System.DateTime DateOfBirth { get; set; }
+        public string Street { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<KYHBPAUser> manager)
         {
@@ -38,5 +44,6 @@ namespace KYHBPA_TeamA.Models
         public DbSet<Event> Events { get; set; }
         public DbSet<Document> Documents { get; set; }
 
+        public System.Data.Entity.DbSet<KYHBPA_TeamA.Models.Membership> Memberships { get; set; }
     }
 }

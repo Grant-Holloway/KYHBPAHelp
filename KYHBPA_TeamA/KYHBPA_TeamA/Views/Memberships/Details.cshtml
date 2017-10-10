@@ -1,0 +1,114 @@
+﻿@model KYHBPA_TeamA.Models.Membership
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Membership</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MemberID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemberID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LicenseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LicenseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StableName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StableName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsTrainer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsTrainer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsOwnerAndTrainer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsOwnerAndTrainer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Affiliation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Affiliation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ManagingPartner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManagingPartner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AgreedToTerms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgreedToTerms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Signature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Signature)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MembershipID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

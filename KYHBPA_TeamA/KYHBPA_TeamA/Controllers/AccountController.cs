@@ -154,7 +154,29 @@ namespace KYHBPA_TeamA.Controllers
                 var user = new KYHBPAUser
                 {
                     UserName = model.Email,
-                    Email = model.Email
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    City = model.City,
+                    Street = model.Street,
+                    State = model.State,
+                    DateOfBirth = model.DateOfBirth,
+                    Member = new Member()
+                    {
+
+                        Email = model.Email,
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        City = model.City,
+                        Address = model.Street,
+                        State = model.State,
+                        DateofBirth = model.DateOfBirth,
+                        Membership = new Membership()
+                        {
+                            Email=model.Email
+                        }
+                    }
+
                 };
 
                 // TODO: add member to login credential

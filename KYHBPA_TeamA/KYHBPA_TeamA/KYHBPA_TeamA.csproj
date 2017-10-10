@@ -196,6 +196,7 @@
     <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MembershipsController.cs" />
     <Compile Include="Controllers\PhotoController.cs" />
     <Compile Include="Entity\AspNetRole.cs">
       <DependentUpon>KYHBPA.tt</DependentUpon>
@@ -235,14 +236,18 @@
     <Compile Include="Migrations\201709282017016_AddedInImageGalleryPropToPhoto.Designer.cs">
       <DependentUpon>201709282017016_AddedInImageGalleryPropToPhoto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710100831413_AddingPropertiesToKYHBPAUser.cs" />
+    <Compile Include="Migrations\201710100831413_AddingPropertiesToKYHBPAUser.Designer.cs">
+      <DependentUpon>201710100831413_AddingPropertiesToKYHBPAUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710100905493_FixedMemberAndMembership.cs" />
+    <Compile Include="Migrations\201710100905493_FixedMemberAndMembership.Designer.cs">
+      <DependentUpon>201710100905493_FixedMemberAndMembership.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\201709101953261_InitialCreate.cs" />
     <Compile Include="Migrations\201709101953261_InitialCreate.Designer.cs">
       <DependentUpon>201709101953261_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709111406196_Initial.cs" />
-    <Compile Include="Migrations\201709111406196_Initial.Designer.cs">
-      <DependentUpon>201709111406196_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201709202032566_AddedPhotoTable.cs" />
     <Compile Include="Migrations\201709202032566_AddedPhotoTable.Designer.cs">
@@ -273,6 +278,7 @@
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Membership.cs" />
     <Compile Include="Models\Photo.cs" />
     <Compile Include="Models\DocumentViewModels.cs" />
     <Compile Include="Models\PhotoViewModels.cs" />
@@ -369,6 +375,12 @@
     <Content Include="Views\Document\Edit.cshtml" />
     <Content Include="Views\Shared\_ImageGallery.cshtml" />
     <Content Include="Views\Home\Board.cshtml" />
+    <Content Include="Views\Memberships\Create.cshtml" />
+    <Content Include="Views\Memberships\Delete.cshtml" />
+    <Content Include="Views\Memberships\Details.cshtml" />
+    <Content Include="Views\Memberships\Edit.cshtml" />
+    <Content Include="Views\Memberships\Index.cshtml" />
+    <Content Include="Views\Home\Membership.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -391,9 +403,6 @@
     <EmbeddedResource Include="Migrations\201709101953261_InitialCreate.resx">
       <DependentUpon>201709101953261_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709111406196_Initial.resx">
-      <DependentUpon>201709111406196_Initial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709221428199_AddedEventsTable.resx">
       <DependentUpon>201709221428199_AddedEventsTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +420,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709282017016_AddedInImageGalleryPropToPhoto.resx">
       <DependentUpon>201709282017016_AddedInImageGalleryPropToPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710100831413_AddingPropertiesToKYHBPAUser.resx">
+      <DependentUpon>201710100831413_AddingPropertiesToKYHBPAUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710100905493_FixedMemberAndMembership.resx">
+      <DependentUpon>201710100905493_FixedMemberAndMembership.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
