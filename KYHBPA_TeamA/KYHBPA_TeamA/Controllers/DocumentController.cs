@@ -14,6 +14,7 @@ namespace KYHBPA_TeamA.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Document
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var docs = db.Documents.Select(d => new DisplayDocumentsViewModel()
@@ -29,6 +30,7 @@ namespace KYHBPA_TeamA.Controllers
         }
 
         // GET: Document/Details/5
+        [Authorize]
         public ActionResult Details(int id)
         {
             var document = db.Documents.Find(id);
@@ -46,6 +48,7 @@ namespace KYHBPA_TeamA.Controllers
 
 
         // GET
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -53,6 +56,7 @@ namespace KYHBPA_TeamA.Controllers
 
         // POST: Document/Create
         [HttpPost]
+        [Authorize]
         public ActionResult Create(AddDocumentViewModel addViewModel, HttpPostedFileBase file = null)
         {
             if (ModelState.IsValid)
@@ -76,6 +80,7 @@ namespace KYHBPA_TeamA.Controllers
             }
         }
         // GET: Document/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -98,6 +103,7 @@ namespace KYHBPA_TeamA.Controllers
 
         // POST: Document/Edit/5
         [HttpPost]
+        [Authorize]
         public ActionResult Edit(DisplayDocumentsViewModel documentVM, FormCollection collection)
         {
             try
@@ -126,6 +132,7 @@ namespace KYHBPA_TeamA.Controllers
         }
 
         // GET: Document/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -149,6 +156,7 @@ namespace KYHBPA_TeamA.Controllers
 
         // POST: Document/Delete/5
         [HttpPost]
+        [Authorize]
         public ActionResult Delete(int id, FormCollection collection)
         {
             try

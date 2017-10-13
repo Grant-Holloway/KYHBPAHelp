@@ -47,7 +47,8 @@ namespace KYHBPA_TeamA.Controllers
         }
 
 
-        // GET
+        // GET: Photo/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -55,6 +56,7 @@ namespace KYHBPA_TeamA.Controllers
 
         // POST: Photo/Create
         [HttpPost]
+        [Authorize]
         public ActionResult Create(AddPhotoViewModel addViewModel, HttpPostedFileBase image = null)
         {
             if (ModelState.IsValid)
@@ -80,6 +82,7 @@ namespace KYHBPA_TeamA.Controllers
         }
 
         // GET: Photo/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -104,6 +107,7 @@ namespace KYHBPA_TeamA.Controllers
 
         // POST: Photo/Edit/5
         [HttpPost]
+        [Authorize]
         public ActionResult Edit(EditPhotosViewModel photoVM, FormCollection collection)
         {
             try
@@ -133,6 +137,7 @@ namespace KYHBPA_TeamA.Controllers
         }
 
         // GET: Photo/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if(id == null)
@@ -156,6 +161,7 @@ namespace KYHBPA_TeamA.Controllers
 
         // POST: Photo/Delete/5
         [HttpPost]
+        [Authorize]
         public ActionResult Delete(int id, FormCollection collection)
         {
             try

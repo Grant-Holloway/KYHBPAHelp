@@ -29,7 +29,7 @@ details,
 figcaption,
 figure,
 footer {
-    font-size: x-small;
+    font-size: small;
 }
 header,
 hgroup,
@@ -390,7 +390,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #000000;
 }
 
 .sr-only {

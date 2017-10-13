@@ -37,7 +37,7 @@ namespace KYHBPA_TeamA.Controllers
         }
         public ActionResult Benefits()
         {
-            ViewBag.Message = "Your Benevolence page.";
+            ViewBag.Message = "KY HBPA Benevolence page.";
 
             return View();
         }

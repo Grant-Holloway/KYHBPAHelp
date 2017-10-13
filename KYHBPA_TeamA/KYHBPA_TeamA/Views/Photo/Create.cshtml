@@ -5,16 +5,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Add Photos Here!</h2>
+
+<p>Below enter the information regarding your image and then add the image to be able to submit it for review.</p>
 
 
-@using (Html.BeginForm("Create","Photo",FormMethod.Post, new { enctype = "multipart/form-data"}))
-{
-    @Html.AntiForgeryToken()
-    
+@using (Html.BeginForm("Create", "Photo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{    
     <div class="form-horizontal">
-        <h4>AddPhotoViewModel</h4>
         <hr />
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -25,15 +34,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Image, htmlAttributes: new {@class = "control-label col-md-2"})
+            @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="Col-md-10">
                 <a class='btn' href="javascript:;">
                     Choose File...
@@ -42,7 +43,7 @@
                 </a>
             </div>
         </div>
-             
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
