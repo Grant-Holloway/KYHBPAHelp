@@ -11,6 +11,7 @@ namespace KYHBPA_TeamA.Models
         public string DocumentName { get; set; }
         public string DocumentDescription { get; set; }
         public byte[] DocumentContent { get; set; }
+        public string MimeType { get; set; }
         public DateTime DocumentUploadDateTime { get; set; }
 
     }

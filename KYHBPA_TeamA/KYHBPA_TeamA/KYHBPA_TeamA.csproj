@@ -235,6 +235,10 @@
     <Compile Include="Migrations\201709282017016_AddedInImageGalleryPropToPhoto.Designer.cs">
       <DependentUpon>201709282017016_AddedInImageGalleryPropToPhoto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710122214249_UpdatedDocumentsTable.cs" />
+    <Compile Include="Migrations\201710122214249_UpdatedDocumentsTable.Designer.cs">
+      <DependentUpon>201710122214249_UpdatedDocumentsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\201709101953261_InitialCreate.cs" />
     <Compile Include="Migrations\201709101953261_InitialCreate.Designer.cs">
@@ -369,6 +373,7 @@
     <Content Include="Views\Document\Edit.cshtml" />
     <Content Include="Views\Shared\_ImageGallery.cshtml" />
     <Content Include="Views\Home\Benefits.cshtml" />
+    <Content Include="Views\Document\Download.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -411,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709282017016_AddedInImageGalleryPropToPhoto.resx">
       <DependentUpon>201709282017016_AddedInImageGalleryPropToPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710122214249_UpdatedDocumentsTable.resx">
+      <DependentUpon>201710122214249_UpdatedDocumentsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

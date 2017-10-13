@@ -41,7 +41,7 @@ namespace KYHBPA_TeamA.Controllers
                 Date = document.DocumentUploadDateTime
             };
 
-            return View(newDocument);
+            return File(document.DocumentContent, document.DocumentName);
         }
 
 
@@ -62,7 +62,8 @@ namespace KYHBPA_TeamA.Controllers
                     DocumentUploadDateTime = DateTime.Now,
                     DocumentDescription = addViewModel.Description,
                     DocumentContent = new byte[file.ContentLength],
-                    DocumentName = addViewModel.Title
+                    DocumentName = addViewModel.Title,
+                    MimeType = file.ContentType
                 };
                 file.InputStream.Read(doc.DocumentContent, 0, file.ContentLength);
                 db.Documents.Add(doc);
@@ -165,6 +166,24 @@ namespace KYHBPA_TeamA.Controllers
         }
 
         /// <summary>
+        /// Downloads document
+        /// </summary>
+        /// <param name="id">ID of document to get</param>
+        /// <returns>File of document</returns>
+        public ActionResult Download(int id)
+        {
+            var document = db.Documents.Find(id);
+            var cd = new System.Net.Mime.ContentDisposition
+            {
+                FileName = document.DocumentName,
+                Inline = true,
+            };
+
+            Response.AppendHeader("Content-Dispostion", cd.ToString());
+            return File(document.DocumentContent, document.MimeType);
+        }
+
+        /// <summary>
         /// Returns document from database if it is found
         /// </summary>
         /// <param name="id">ID of document to get</param>
@@ -174,7 +193,7 @@ namespace KYHBPA_TeamA.Controllers
             Document docToGet = db.Documents.Find(id);
 
             if (docToGet != null)
-                return File(docToGet.DocumentContent, docToGet.DocumentDescription);
+                return File(docToGet.DocumentContent, docToGet.MimeType);
             else
                 return null;
         }
