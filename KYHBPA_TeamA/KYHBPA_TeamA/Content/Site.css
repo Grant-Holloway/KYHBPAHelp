@@ -1,7 +1,7 @@
 ﻿body {
     /*padding-top: 400px;*/
     padding-bottom: 40px;
-    background: rgb(248, 246, 186);
+    background: rgb(153, 204, 255)
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -50,9 +50,9 @@ textarea {
 
 
 .jumbotron {
-    background-image: radial-gradient(circle farthest-side at center bottom,#e4e5bc,rgba(81, 58, 50, 0.59) 290%);
+    background-image: radial-gradient(circle farthest-side at center bottom,#99ccff,rgba(81, 58, 50, 0.59) 290%);
     margin-top: 20px;
-    border: 1px #d8daa7 solid;
+    border: 1px #80bfff solid;
     box-shadow: 1px 4px 20px 0px;
 }
 
