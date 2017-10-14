@@ -393,6 +393,10 @@ hr {
   border-top: 1px solid #000000;
 }
 
+#hrfooter {
+    border-top: 1px solid #ffffff;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -404,9 +408,7 @@ hr {
   border: 0;
 }
 
-p {
-  margin: 0 0 10px;
-}
+p{}
 
 .lead {
   margin-bottom: 20px;
@@ -499,7 +501,10 @@ h6 small,
   color: #999999;
 }
 
-h1,
+h1 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
 h2,
 h3 {
   margin-top: 20px;
