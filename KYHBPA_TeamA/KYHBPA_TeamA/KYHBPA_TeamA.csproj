@@ -380,6 +380,7 @@
     <Content Include="Views\Home\Benefits.cshtml" />
     <Content Include="Views\Home\Board.cshtml" />
     <Content Include="Views\Error\ErrorPage.cshtml" />
+    <Content Include="Views\Home\RacingGambling.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

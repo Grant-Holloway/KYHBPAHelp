@@ -41,5 +41,11 @@ namespace KYHBPA_TeamA.Controllers
 
             return View();
         }
+        public ActionResult RacingGambling()
+        {
+            ViewBag.Message = "Racing and Gambling Education";
+
+            return View();
+        }
     }
 }
