@@ -40,5 +40,7 @@ namespace KYHBPA_TeamA.Models
         public DbSet<Event> Events { get; set; }
         public DbSet<Document> Documents { get; set; }
 
+        object placeHolderVariable;
+        public System.Data.Entity.DbSet<KYHBPA_TeamA.Models.Membership> Memberships { get; set; }
     }
 }
