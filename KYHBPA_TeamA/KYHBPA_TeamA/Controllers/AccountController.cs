@@ -157,13 +157,11 @@ namespace KYHBPA_TeamA.Controllers
                     Email = model.Email,
                     Member = new Member()
                     {
-                        FirstName = model.FirstName
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        Email = model.Email,                        
                     }
                 };
-
-                // TODO: add member to login credential
-                
-
 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

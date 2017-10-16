@@ -75,29 +75,9 @@ namespace KYHBPA_TeamA.Models
         public string FirstName { get; set; }
 
         [Required]
-        [Display(Name = "Middle Name")]
-        public string MiddleName { get; set; }
-
-        [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required]
-        [DataType(DataType.DateTime)]
-        [Display(Name = "Date of Birth")]
-        public DateTime DateOfBirth { get; set; }
-
-        [Required]
-        [Display(Name = "Street Address")]
-        public string Street { get; set; }
-
-        [Required]
-        [Display(Name = "City")]
-        public string City { get; set; }
-
-        [Required]
-        [Display(Name = "State")]
-        public string State { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

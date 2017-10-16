@@ -248,14 +248,14 @@
     <Compile Include="Migrations\201710140204134_PhotoUpdate.Designer.cs">
       <DependentUpon>201710140204134_PhotoUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710161019037_CreatedMembershipTableTrimmedMember.cs" />
+    <Compile Include="Migrations\201710161019037_CreatedMembershipTableTrimmedMember.Designer.cs">
+      <DependentUpon>201710161019037_CreatedMembershipTableTrimmedMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\201709101953261_InitialCreate.cs" />
     <Compile Include="Migrations\201709101953261_InitialCreate.Designer.cs">
       <DependentUpon>201709101953261_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709111406196_Initial.cs" />
-    <Compile Include="Migrations\201709111406196_Initial.Designer.cs">
-      <DependentUpon>201709111406196_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201709202032566_AddedPhotoTable.cs" />
     <Compile Include="Migrations\201709202032566_AddedPhotoTable.Designer.cs">
@@ -290,6 +290,7 @@
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Membership.cs" />
     <Compile Include="Models\Photo.cs" />
     <Compile Include="Models\DocumentViewModels.cs" />
     <Compile Include="Models\PhotoViewModels.cs" />
@@ -676,9 +677,6 @@
     <EmbeddedResource Include="Migrations\201709101953261_InitialCreate.resx">
       <DependentUpon>201709101953261_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709111406196_Initial.resx">
-      <DependentUpon>201709111406196_Initial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709221428199_AddedEventsTable.resx">
       <DependentUpon>201709221428199_AddedEventsTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -699,6 +697,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710140204134_PhotoUpdate.resx">
       <DependentUpon>201710140204134_PhotoUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710161019037_CreatedMembershipTableTrimmedMember.resx">
+      <DependentUpon>201710161019037_CreatedMembershipTableTrimmedMember.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
