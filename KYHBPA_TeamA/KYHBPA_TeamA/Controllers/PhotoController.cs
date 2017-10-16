@@ -152,6 +152,7 @@ namespace KYHBPA_TeamA.Controllers
 
         // POST: Photo/Edit/5
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(EditPhotosViewModel photoVM, FormCollection collection)
         {
             try
