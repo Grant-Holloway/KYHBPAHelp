@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA_TeamA.Models;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.AspNet.Identity;
 
 namespace KYHBPA_TeamA.Controllers
 {
@@ -35,9 +37,13 @@ namespace KYHBPA_TeamA.Controllers
             return View(membership);
         }
 
+        [Authorize]
         // GET: Memberships/Create
         public ActionResult Create()
         {
+            var user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId()).Email;
+            var MemberID = user;
+            
             return View();
         }
 
