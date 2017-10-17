@@ -1,0 +1,53 @@
+﻿@model IEnumerable<KYHBPA_TeamA.Models.DisplayBoardOfDirectorsViewModel>
+
+@{
+    ViewBag.Title = "Our Board";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Board of Directors</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            Picture
+        </th>
+        <th>
+            Contact Information
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                <img class="img-thumbnail" width="100" height="100" src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.PhotoContent)))" />
+            </td>
+
+            <td>
+                <div>
+                    @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                </div>
+              @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+              
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

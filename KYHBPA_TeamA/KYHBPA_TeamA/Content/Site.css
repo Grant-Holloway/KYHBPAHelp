@@ -21,7 +21,7 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    /*max-width: 280px;*/
 }
 
 /*Banner text stuff*/
@@ -63,10 +63,58 @@ textarea {
 
 .carousel-inner > .item > img{
     margin:auto;
-    max-height:700px
+    max-height:700px;
 }
 
 .carousel{
-    max-height:700px
+    max-height:700px;
+    min-height:700px;
 }
 
+.input {
+    max-width: none !important;
+}
+
+#custom-search-input input {
+    border: 0;
+    box-shadow: none;
+    min-height: 45px;
+}
+
+#custom-search-input button {
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+    #custom-search-input button:hover {
+        border: 0;
+        box-shadow: none;
+        border-left: solid 1px #ccc;
+    }
+
+#custom-search-input .glyphicon-search {
+    font-size: 23px;
+}
+
+#SearchArea{
+    margin-bottom:4px;
+}
+
+
+
+/*Drop Down menu Style*/
+.navbar-nav > li > .dropdown-menu {
+    background: rgba(0,0,0,0.65);
+    color:white;
+    font-size:22px;
+    padding:7px;
+}
+
+.dropdown-menu > li > a{
+    color:white;
+}
