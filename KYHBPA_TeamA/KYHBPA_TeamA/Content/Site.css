@@ -1,1 +1,37 @@
 ﻿
+#fluid {
+    background: url(../Content/hbpaBanner4.jpg);
+    background-size: cover;
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+    border-bottom: black 1px solid;
+    box-shadow: 0px 7px 20px 0px #0c0a0b;
+}
+
+
+.jumbotron {
+    background-image: radial-gradient(circle farthest-side at center bottom,#e4e5bc,rgba(81, 58, 50, 0.59) 290%);
+    margin-top: 20px;
+    border: 1px #d8daa7 solid;
+    box-shadow: 1px 4px 20px 0px;
+}
+
+
+
+.carousel-inner > .item > img {
+    margin: auto;
+    max-height: 700px;
+}
+
+
+
+
+
+
+
+
+
+
+
