@@ -23,10 +23,40 @@
 u {
     text-decoration: underline;
 }
+
+.logoimage {
+    float: left !important;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    z-index: 21;
+    max-width: 100px;
+    height: auto;
+}
+
+/*.logoshadow {
+    padding: 25px 19px;
+    position: absolute;
+    max-width:85px;
+    top: 36px;
+    left: 41px;
+    box-shadow: inset 6px 0 9px -5px rgba(0,0,0,0.7), inset -9px 0 6px rgba(0,0,0,0.7), 
+        15px 0 14px -5px rgba(0,0,0,0.7), -18px 0 11px -3px rgba(0,0,0,0.7);
+    height: 52px;
+    z-index: 20;
+}*/
+
+@media (max-width: 1050px) {
+    .logoshadow {
+        display: none;
+    }
+}
+
 form {
     color:inherit;
     font-size:medium;
 }
+
 article,
 aside,
 details,
@@ -35,6 +65,7 @@ figure,
 footer {
     font-size: inherit;
 }
+
 header,
 hgroup,
 main,
@@ -75,7 +106,7 @@ a:focus {
 
 a:active,
 a:hover {
-  outline: 0;
+    outline: 0;
 }
 
 h1 {
@@ -364,9 +395,7 @@ img {
 }
 
 .img-responsive {
-  display: block;
-  height: auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 .img-rounded {
@@ -845,7 +874,11 @@ pre code {
 .col-md-3,
 .col-md-4,
 .col-md-5,
-.col-md-6,
+.col-md-6 {
+    width: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+}
 .col-md-7,
 .col-md-8,
 .col-md-9,
@@ -4281,7 +4314,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (min-width: 768px) {
   .navbar-nav {
-    float: left;
+    float: right;
     margin: 0;
   }
   .navbar-nav > li {
@@ -4295,10 +4328,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (min-width: 768px) {
   .navbar-left {
-    float: left !important;
+    float: right !important;
   }
   .navbar-right {
-    float: right !important;
+    float: left !important;
   }
 }
 
@@ -4569,12 +4602,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-color: #101010;
 }
 
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus {
-  color: #ffffff;
-  background-color: #080808;
-}
+    .navbar-inverse .navbar-nav > .open > a,
+    .navbar-inverse .navbar-nav > .open > a:hover,
+    .navbar-inverse .navbar-nav > .open > a:focus {
+        color: #ffffff;
+        background-color: #41f4a6;
+    }
 
 .navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
   border-top-color: #ffffff;
@@ -6011,9 +6044,126 @@ body.modal-open,
   content: " ";
 }
 
+.soc {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: 2px;
+    padding-left: 3px;
+    z-index: 10;
+}
+
+    .soc li a {
+        font-family: si !important;
+        font-style: normal;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -o-transition: .1s;
+        -moz-transition: .1s;
+        -webkit-transition: .1s;
+        transition: .1s;
+        transition-property: all;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        overflow: hidden;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        position: relative;
+        z-index: 1;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 19px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        border-radius: 9px;
+        margin-right: 5px;
+        color: #ffffff;
+        background-color: none;
+    }
+
+.soc-twitter {
+    background-color: #4da7de;
+}
+
+.soc-facebook {
+    background-color: #3e5b98;
+}
+
+.soc-google {
+    background-color: #d93e2d;
+}
+
+
+
+.gradient {
+    box-shadow: inset 0 0 10px #000000;
+}
+
+.relative {
+    position: relative;
+}
+
+.overlay {
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.module {
+    display: table;
+    margin-bottom: 20px;
+}
+
+.module ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.module ul li {
+    float: left;
+}
+
+.slide {
+    cursor: pointer;
+    position: relative;
+}
+
+.slidemessage {
+    font-size: 1em;
+}
+
+.slideContent {
+    color: darkgreen;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    transition: bottom 0.5s ease;
+}
+
+.sharehide {
+    display: none;
+}
+
+.shareitems {
+    position: relative;
+    z-index: 11;
+}
+
+.slideheader {
+    font-size: 1.5em;
+}
+
 .carousel {
   position: relative;
-  max-height
 }
 
 .carousel-inner {

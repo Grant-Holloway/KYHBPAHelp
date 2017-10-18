@@ -398,6 +398,10 @@
     <Content Include="Content\fontawesome.js" />
     <Content Include="Content\fontawesome.min.js" />
     <Content Include="Content\hbpaBanner4.jpg" />
+    <Content Include="Content\Tile1.jpg" />
+    <Content Include="Content\Tile2.jpg" />
+    <Content Include="Content\Tile3.jpg" />
+    <Content Include="Content\Logo.png" />
     <Content Include="Content\imgs\buttons.png" />
     <Content Include="Content\imgs\but_repeat.gif" />
     <Content Include="Content\imgs\calendar.gif" />

@@ -42,6 +42,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
 +function ($) { "use strict";
 
+
   // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
   // ============================================================
 
@@ -62,6 +63,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     }
   }
 
+
   // http://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {
     var called = false, $el = this
@@ -76,6 +78,16 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   })
 
 }(window.jQuery);
+
+window.onscroll = function () { logoScroll() };
+
+function logoScroll() {
+    if (docScroll > 50) {
+        document.getElementById("myImg").className = "slideDown";
+    } else {
+        document.getElementById("myImg").className = "";
+    }
+}
 
 /* ========================================================================
  * Bootstrap: alert.js v3.0.0
