@@ -23,7 +23,7 @@
 u {
     text-decoration: underline;
 }
-
+/*NavBar Logo*/
 .logoimage {
     float: left !important;
     position: absolute;
@@ -6043,7 +6043,7 @@ body.modal-open,
   border-right-width: 0;
   content: " ";
 }
-
+/*Tile Images*/
 .soc {
     overflow: hidden;
     margin: 0;
@@ -6100,7 +6100,6 @@ body.modal-open,
 .soc-google {
     background-color: #d93e2d;
 }
-
 
 
 .gradient {
@@ -6161,6 +6160,7 @@ body.modal-open,
 .slideheader {
     font-size: 1.5em;
 }
+/*End Tile Image*/
 
 .carousel {
   position: relative;
